@@ -31,7 +31,7 @@ conda env create -f GenCo.yml
 ### Pre-trained models
 Pre-trained models can be downloaded [here](https://github.com/jxhuang0508/HCL/releases/tag/model) and put ```GTA5_HCL_source.pth``` into ```HCL/pretrained_models/HCL_source_only_426```, ```GTA5_HCL_target.pth``` into ```HCL/pretrained_models/HCL_target_482```. 
 
-### Training and Evaluation
+### Training and Evaluation with DA
 To train and evaluate over 100-shot Obama:
 ```bash
 conda activate genco
