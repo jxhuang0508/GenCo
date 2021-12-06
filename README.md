@@ -60,10 +60,6 @@ To train and evaluate over AFHQ Dog:
 ```bash
 conda activate genco
 cd GenCo/Lowshot_DA
-sh Scripts/train_obama.sh
-sh Scripts/train_grumpy_cat.sh
-sh Scripts/train_panda.sh
-sh Scripts/train_afhq_cat.sh 
 sh Scripts/train_afhq_dog.sh
 ```
 
