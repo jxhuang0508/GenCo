@@ -32,67 +32,28 @@ conda env create -f GenCo.yml
 Pre-trained models can be downloaded [here](https://github.com/jxhuang0508/HCL/releases/tag/model) and put ```GTA5_HCL_source.pth``` into ```HCL/pretrained_models/HCL_source_only_426```, ```GTA5_HCL_target.pth``` into ```HCL/pretrained_models/HCL_target_482```. 
 
 ### Training and Evaluation with DA
-To train and evaluate over 100-shot Obama:
+To train and evaluate over 100-shot (Obama, Grumpy cat, Panda) or AFHQ (Cat, Dog):
 ```bash
 conda activate genco
 cd GenCo/Lowshot_DA
-sh Scripts/train_obama.sh
-```
-To train and evaluate over 100-shot Grumpy cat:
-```bash
-conda activate genco
-cd GenCo/Lowshot_DA
-sh Scripts/train_grumpy_cat.sh
-```
-To train and evaluate over 100-shot Panda:
-```bash
-conda activate genco
-cd GenCo/Lowshot_DA
-sh Scripts/train_panda.sh
-```
-To train and evaluate over AFHQ Cat:
-```bash
-conda activate genco
-cd GenCo/Lowshot_DA
-sh Scripts/train_afhq_cat.sh 
-```
-To train and evaluate over AFHQ Dog:
-```bash
-conda activate genco
-cd GenCo/Lowshot_DA
+sh Scripts/train_obama.sh # Ref FID 32.21
+sh Scripts/train_grumpy_cat.sh # Ref FID 17.79
+sh Scripts/train_panda.sh # Ref FID 9.49
+sh Scripts/train_afhq_cat.sh # Ref FID 30.89
 sh Scripts/train_afhq_dog.sh
 ```
 
+
 ### Training and Evaluation with ADA
-To train and evaluate over 100-shot Obama:
+To train and evaluate over 100-shot (Obama, Grumpy cat, Panda) or AFHQ (Cat, Dog):
 ```bash
 conda activate genco
 cd GenCo/low_shot_ADA
 sh Scripts/train_obama.sh
-```
-To train and evaluate over 100-shot Grumpy cat:
-```bash
-conda activate genco
-cd GenCo/low_shot_ADA
 sh Scripts/train_grumpy_cat.sh
-```
-To train and evaluate over 100-shot Panda:
-```bash
-conda activate genco
-cd GenCo/low_shot_ADA
 sh Scripts/train_panda.sh
-```
-To train and evaluate over AFHQ Cat:
-```bash
-conda activate genco
-cd GenCo/low_shot_ADA
-sh Scripts/train_afhq_cat.sh 
-```
-To train and evaluate over AFHQ Dog:
-```bash
-conda activate genco
-cd GenCo/low_shot_ADA
-sh Scripts/train_afhq_dog.sh
+sh Scripts/train_afhq_cat.sh
+sh Scripts/train_afhq_dog.sh # Ref FID 49.63
 ```
 
 ### Evaluation over Pretrained models
