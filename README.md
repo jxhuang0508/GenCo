@@ -56,22 +56,6 @@ sh Scripts/train_afhq_cat.sh
 sh Scripts/train_afhq_dog.sh # Ref FID 49.63
 ```
 
-### Evaluation over Pretrained models
-
-To evaluate GTA5_HCL_source.pth:
-```bash
-conda activate hcl
-cd HCL/hcl/scripts
-python test.py --cfg ./configs/hcl_source_pretrained.yml
-```
-
-To evaluate GTA5_HCL_target.pth:
-```bash
-conda activate hcl_target
-cd HCL/hcl_target
-python evaluate_cityscapes_advent_best.py --restore-from ../../pretrained_models/GTA5_HCL_target.pth
-```
-
  ## Related Works
  We also would like to thank great works as follows:
  - https://github.com/NVlabs/stylegan2-ada-pytorch
