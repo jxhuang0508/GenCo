@@ -2,6 +2,7 @@
 
 ### Updates
 
+
 ## Paper
 ![](./teaser.png)
 [GenCo: Generative Co-training for Generative Adversarial Networks with Limited Data](https://xxx.pdf)  
