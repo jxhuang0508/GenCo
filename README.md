@@ -31,42 +31,42 @@ conda env create -f GenCo.yml
 ### Pre-trained models
 Pre-trained models can be downloaded [here](https://github.com/jxhuang0508/HCL/releases/tag/model) and put ```GTA5_HCL_source.pth``` into ```HCL/pretrained_models/HCL_source_only_426```, ```GTA5_HCL_target.pth``` into ```HCL/pretrained_models/HCL_target_482```. 
 
-### Training
-To train GTA5_HCL_source:
+### Training and Evaluation
+To train and evaluate over 100-shot Obama:
 ```bash
-conda activate hcl
-cd HCL/hcl/scripts
-python train.py --cfg configs/hcl_source.yml
+conda activate genco
+cd GenCo/Lowshot_DA
+sh Scripts/train_obama.sh
+```
+To train and evaluate over 100-shot Grumpy cat:
+```bash
+conda activate genco
+cd GenCo/Lowshot_DA
+sh Scripts/train_grumpy_cat.sh
+```
+To train and evaluate over 100-shot Panda:
+```bash
+conda activate genco
+cd GenCo/Lowshot_DA
+sh Scripts/train_panda.sh
+```
+To train and evaluate over AFHQ Cat:
+```bash
+conda activate genco
+cd GenCo/Lowshot_DA
+sh Scripts/train_afhq_cat.sh 
+```
+To train and evaluate over AFHQ Dog:
+```bash
+conda activate genco
+cd GenCo/Lowshot_DA
+sh Scripts/train_obama.sh
+sh Scripts/train_grumpy_cat.sh
+sh Scripts/train_panda.sh
+sh Scripts/train_afhq_cat.sh 
+sh Scripts/train_afhq_dog.sh
 ```
 
-To evaluate trained GTA5_HCL_source:
-```bash
-conda activate hcl
-cd HCL/hcl/scripts
-python test.py --cfg configs/hcl_source.yml
-```
-
-To train GTA5_HCL_target:
-```bash
-conda activate hcl_target
-cd HCL/hcl_target
-python generate_plabel_cityscapes_advent.py  --restore-from ../../pretrained_models/GTA5_HCL_source.pth
-```
-```bash
-conda activate hcl_target
-python train_ft_advent_hcl.py --snapshot-dir ./snapshots/HCL_target \
---restore-from ../../pretrained_models/GTA5_HCL_source.pth \
---drop 0.2 --warm-up 5000 --batch-size 9 --learning-rate 1e-4 --crop-size 512,256 --lambda-seg 0.5 --lambda-adv-target1 0 \
---lambda-adv-target2 0 --lambda-me-target 0 --lambda-kl-target 0 --norm-style gn --class-balance --only-hard-label 80 \
---max-value 7 --gpu-ids 0,1,2 --often-balance  --use-se  --input-size 1280,640  --train_bn  --autoaug False --save-pred-every 300
-```
-
-To evaluate trained GTA5_HCL_target:
-```bash
-conda activate hcl_target
-cd HCL/hcl_target
-./test.sh
-```
 
 ### Evaluation over Pretrained models
 
