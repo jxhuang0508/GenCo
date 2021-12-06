@@ -18,48 +18,14 @@
 Training effective Generative Adversarial Networks (GANs) requires large amounts of training data, without which the trained models are usually sub-optimal with discriminator over-fitting. Several prior studies address this issue by expanding the distribution of the limited training data via massive and hand-crafted data augmentation. We handle data-limited image generation from a very different perspective. Specifically, we design GenCo, a Generative Co-training network that mitigates the discriminator over-fitting issue by introducing multiple complementary discriminators that provide diverse supervision from multiple distinctive views in training. We instantiate the idea of GenCo in two ways. The first way is Weight-Discrepancy Co-training (WeCo) which co-trains multiple distinctive discriminators by diversifying their parameters. The second way is Data-Discrepancy Co-training (DaCo) which achieves co-training by feeding discriminators with different views of the input images (e.g., different frequency components of the input images). Extensive experiments over multiple benchmarks show that GenCo achieves superior generation with limited training data. In addition, GenCo also complements the augmentation approach with consistent and clear performance gains when combined.
 
 ## Installation
-1. Conda enviroment:
+1. Clone the repo:
 ```bash
-conda create -n hcl python=3.6
-conda activate hcl
-conda install -c menpo opencv
-pip install torch==1.0.0 torchvision==0.2.1
+git clone https://github.com/jxhuang0508/GenCo.git
 ```
 
-2. Clone the [ADVENT](https://github.com/valeoai/ADVENT):
+2. Install environment from the environment.yml file:
 ```bash
-git clone https://github.com/valeoai/ADVENT.git
-pip install -e ./ADVENT
-```
-
-3. Clone the repo:
-```bash
-https://github.com/jxhuang0508/HCL.git
-pip install -e ./HCL
-```
-
-4. Install environment:
-```bash
-conda env create -f hcl_target.yml
-```
-
-### Prepare Dataset
-* **GTA5**: Please follow the instructions [here](https://download.visinf.tu-darmstadt.de/data/from_games/) to download images and semantic segmentation annotations. The GTA5 dataset directory should have this basic structure:
-```bash
-HCL/data/GTA5/                               % GTA dataset root
-HCL/data/GTA5/images/                        % GTA images
-HCL/data/GTA5/labels/                        % Semantic segmentation labels
-...
-```
-
-* **Cityscapes**: Please follow the instructions in [Cityscape](https://www.cityscapes-dataset.com/) to download the images and validation ground-truths. The Cityscapes dataset directory should have this basic structure:
-```bash
-HCL/data/Cityscapes/                         % Cityscapes dataset root
-HCL/data/Cityscapes/leftImg8bit              % Cityscapes images
-HCL/data/Cityscapes/leftImg8bit/val
-HCL/data/Cityscapes/gtFine                   % Semantic segmentation labels
-HCL/data/Cityscapes/gtFine/val
-...
+conda env create -f GenCo.yml
 ```
 
 ### Pre-trained models
@@ -120,9 +86,7 @@ python evaluate_cityscapes_advent_best.py --restore-from ../../pretrained_models
 
  ## Related Works
  We also would like to thank great works as follows:
- - https://github.com/valeoai/ADVENT
- - https://github.com/layumi/Seg-Uncertainty
- - https://github.com/yzou2/CRST
+ - https://github.com/NVlabs/stylegan2-ada-pytorch
 
 
 ## Contact
