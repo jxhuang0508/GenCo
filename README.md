@@ -63,6 +63,37 @@ cd GenCo/Lowshot_DA
 sh Scripts/train_afhq_dog.sh
 ```
 
+### Training and Evaluation with ADA
+To train and evaluate over 100-shot Obama:
+```bash
+conda activate genco
+cd GenCo/low_shot_ADA
+sh Scripts/train_obama.sh
+```
+To train and evaluate over 100-shot Grumpy cat:
+```bash
+conda activate genco
+cd GenCo/low_shot_ADA
+sh Scripts/train_grumpy_cat.sh
+```
+To train and evaluate over 100-shot Panda:
+```bash
+conda activate genco
+cd GenCo/low_shot_ADA
+sh Scripts/train_panda.sh
+```
+To train and evaluate over AFHQ Cat:
+```bash
+conda activate genco
+cd GenCo/low_shot_ADA
+sh Scripts/train_afhq_cat.sh 
+```
+To train and evaluate over AFHQ Dog:
+```bash
+conda activate genco
+cd GenCo/low_shot_ADA
+sh Scripts/train_afhq_dog.sh
+```
 
 ### Evaluation over Pretrained models
 
