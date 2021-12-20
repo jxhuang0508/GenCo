@@ -5,7 +5,7 @@
 
 ## Paper
 ![](./teaser.png)
-[GenCo: Generative Co-training for Generative Adversarial Networks with Limited Data](https://xxx.pdf)  
+[GenCo: Generative Co-training for Generative Adversarial Networks with Limited Data](https://arxiv.org/pdf/2110.01254.pdf)  
  Kaiwen Cui*, [Jiaxing Huang*](https://scholar.google.com/citations?user=czirNcwAAAAJ&hl=en&oi=ao), Zhipeng Luo, [Gongjie Zhang](https://scholar.google.com/citations?user=sRBTPp4AAAAJ&hl=en), [Fangneng Zhan](https://scholar.google.com/citations?user=8zbcfzAAAAAJ&hl=en&oi=ao),[Shijian Lu](https://scholar.google.com/citations?user=uYmK-A0AAAAJ&hl=en)
  
  *indicates equal contribution.
